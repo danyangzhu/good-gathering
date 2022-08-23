@@ -1,2 +1,1 @@
-# I am anker pig,like rap.
-![image](https://github.com/danyangzhu/good-gathering/blob/master/anker.png) 
+# I am damn pig. like rap, basketball, dance is to easy for me.
