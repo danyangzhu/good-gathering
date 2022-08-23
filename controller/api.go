@@ -7,7 +7,6 @@ import (
 )
 
 func DescribeAllPrice(c *gin.Context) {
-
 	allPrice, err := service.GetAllPrice()
 	if err != nil {
 
