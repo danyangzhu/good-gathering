@@ -18,7 +18,6 @@ var infoNameList = []string{"黄金", "白银", "铂金", "钯金", "黄金99.99
 	"美黄金", "美铂金", "美钯金", "美白银", "美铑金", "港金", "伦敦金", "伦敦银", "伦敦铂", "伦敦钯", "美元"}
 
 func DescribeAllPrice(c *gin.Context) {
-
 	allPrice, err := service.GetAllPrice()
 	if err != nil {
 
