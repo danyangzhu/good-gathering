@@ -1,1 +1,1 @@
-# I am damn pig. like rap, basketball, dance is to easy for me.
+# I am damn pig. like rap, basketball, dance is too easy for me.
