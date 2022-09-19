@@ -1,10 +1,11 @@
 package conf
 
 import (
+	"time"
+
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/cast"
 	"github.com/spf13/viper"
-	"time"
 )
 
 var vipers *Conf
@@ -200,7 +201,7 @@ func Init() {
 		viper.New(),
 	}
 	vipers.SetConfigType("yaml")
-	vipers.SetConfigName("conf")
+	vipers.SetConfigName("good")
 	vipers.AddConfigPath(DIR)
 	err := vipers.ReadInConfig() // Find and read the conf file
 	if err != nil {              // Handle errors reading the conf file

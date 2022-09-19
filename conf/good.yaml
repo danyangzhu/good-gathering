@@ -9,7 +9,7 @@ app:
 
 log:
   path: "./log"  # 日志文件的目录，与织云日志目录对齐
-  level: "debug"  # 支持debug,info,warn,error。error日志不管怎么设置总会打到error.log
+  level: "info"  # 支持debug,info,warn,error。error日志不管怎么设置总会打到error.log
   maxSize: 128  # 日志文件最大的大小，单位是M
   maxBackups: 10 # 要保留的最大旧日志文件数，但过期了（>MaxAge）仍可能删除
   maxAge: 7 # 保留日志的天数

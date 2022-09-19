@@ -4,6 +4,7 @@ import (
 	"flag"
 	"good_gathering/conf"
 	"good_gathering/controller"
+	"good_gathering/log"
 	"good_gathering/service"
 	"strconv"
 
@@ -25,6 +26,11 @@ func SetCmdParam() {
 
 func main() {
 	SetCmdParam()
+	// 核心模块初始化
+	conf.Init()
+	// 初始化日志
+	log.Init()
+
 	go service.TaskInit()
 	router := gin.Default()
 
@@ -39,7 +45,6 @@ func main() {
 
 	router.Use(TlsHandler(443))
 	router.RunTLS(":"+strconv.Itoa(443), "./conf/kyzb0755.com_bundle.pem", "./conf/kyzb0755.com.key")
-
 }
 
 func TlsHandler(port int) gin.HandlerFunc {
