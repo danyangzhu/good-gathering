@@ -1,1 +1,13 @@
-# I am adam pig. like rap, basketball, dance is too easy for me.
+## 项目介绍
+好聚好散后台代码，包括小程序完整后台代码
+
+## 快速上手
+`go run main.go`
+
+## 常见问题
+
+## 行为准则
+
+## 如何加入
+
+## 团队介绍
