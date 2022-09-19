@@ -1,13 +1,28 @@
 package main
 
 import (
+	"flag"
+	"good_gathering/conf"
 	"good_gathering/controller"
 	"good_gathering/service"
 
 	"github.com/gin-gonic/gin"
 )
 
+// SetCmdParam 设置参数
+func SetCmdParam() {
+	var confDir string
+	flag.StringVar(&confDir, "confDir", "./conf", "config dir")
+	flag.Parse()
+	switch {
+	case confDir != "./conf":
+		conf.SetConfDir(confDir)
+	default:
+	}
+}
+
 func main() {
+	SetCmdParam()
 	go service.TaskInit()
 	router := gin.Default()
 
@@ -19,5 +34,5 @@ func main() {
 		api.POST("/DescribePriceData", controller.DescribePriceData)
 	}
 
-	router.Run(":8080")
+	router.Run(":80")
 }
